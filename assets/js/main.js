@@ -64,3 +64,25 @@ sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
 sr.reveal(`.profile__buttons`, {delay: 800})
 sr.reveal(`.filters__content`, {delay: 900})
 sr.reveal(`.filters`, {delay: 1000})
+
+/*=============== PROJECT CARD ANIMATION ===============*/
+document.addEventListener('DOMContentLoaded', function() {
+    const openButton = document.querySelector('.projects__button');
+    const modal = document.querySelector('.projects__modal');
+    const overlay = document.querySelector('.projects__overlay');
+    const closeButton = document.querySelector('.projects__close');
+
+    function openModal() {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        overlay.classList.remove('active');
+    }
+
+    openButton.addEventListener('click', openModal);
+    closeButton.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+});

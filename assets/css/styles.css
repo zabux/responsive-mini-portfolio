@@ -322,16 +322,6 @@ body.dark-theme {
   height: 100%;
 }
 
-.projects__card {
-    position: relative;
-    overflow: hidden;
-}
-
-.projects__img {
-    width: 100%;
-    height: auto;
-}
-
 .projects__content {
     position: absolute;
     bottom: 0;

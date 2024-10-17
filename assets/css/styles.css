@@ -322,82 +322,19 @@ body.dark-theme {
   height: 100%;
 }
 
-.projects__content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, 
-                hsla(var(--hue), 24%, 40%, .3) 0%, 
-                hsla(var(--hue), 24%, 4%, 1) 95%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.5rem 1.25rem;
-    transition: .3s;
-}
-
-.projects__subtitle,
-.projects__title {
-    color: #fff;
-    margin-bottom: 0.25rem;
-}
-
-.projects__button {
-    align-self: flex-start;
-    margin-top: 0.5rem;
-}
-
 .projects__modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: 80%;
-    max-width: 500px;
-    background: linear-gradient(180deg, 
-                hsla(var(--hue), 24%, 40%, .9) 0%, 
-                hsla(var(--hue), 24%, 4%, 1) 95%);
-    border-radius: 10px;
-    padding: 1.5rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s ease-in-out;
-    z-index: 1000;
-}
-
-.projects__modal.active {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-    visibility: visible;
-}
-
-.projects__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: .3s ease-in-out;
-    z-index: 999;
-}
-
-.projects__overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.projects__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  background: linear-gradient(180deg, 
+              hsla(var(--hue), 24%, 40%, .3) 0%, 
+              hsla(var(--hue), 24%, 4%, 1) 95%);
+  display: grid;
+  align-items: flex-end;
+  padding: 1.5rem 1.25rem;
+  transition: .3s;
 }
 
 .projects__subtitle, 

@@ -65,6 +65,24 @@ sr.reveal(`.profile__buttons`, {delay: 800})
 sr.reveal(`.filters__content`, {delay: 900})
 sr.reveal(`.filters`, {delay: 1000})
 
+/*=============== JAM DIGITAL ===============*/
+const jamElement = document.getElementById('jam');
+const menitElement = document.getElementById('menit');
+const detikElement = document.getElementById('detik');
+
+function updateJam() {
+  const now = new Date();
+  const jam = now.getHours();
+  const menit = now.getMinutes();
+  const detik = now.getSeconds();
+
+  jamElement.textContent = String(jam).padStart(2, '0');
+  menitElement.textContent = String(menit).padStart(2, '0');
+  detikElement.textContent = String(detik).padStart(2, '0');
+}
+
+setInterval(updateJam, 1000);
+
 /*=============== PROJECT CARD ANIMATION ===============*/
 document.addEventListener('DOMContentLoaded', function() {
     const openButton = document.querySelector('.projects__button');

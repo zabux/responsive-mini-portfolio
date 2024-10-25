@@ -223,11 +223,14 @@ body.dark-theme {
 .profile__info-number {
   font-size: var(--normal-font-size);
   margin-bottom: .25rem;
+  color: #2196f3; /* Warna biru */
+  font-weight: bold;
 }
 
 .profile__info-description {
   font-size: var(--smaller-font-size);
   font-weight: 500;
+  color: #666; /* Warna abu-abu */
 }
 
 .profile__buttons, 

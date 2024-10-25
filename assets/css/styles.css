@@ -214,10 +214,7 @@ body.dark-theme {
   grid-template-columns: repeat(3, max-content);
   justify-content: center;
   column-gap: 2.5rem;
-  background-color: #f7f7f7;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 10px rgba(33, 150, 243, 0.5); /* Shadow biru */
 }
 
 .profile__info-group {

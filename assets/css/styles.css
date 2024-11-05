@@ -236,16 +236,16 @@ body.dark-theme {
 .profile__buttons, 
 .profile__buttons-small {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
 .profile__buttons {
-  column-gap: 2rem;
+  gap: 1rem;
 }
 
 .profile__buttons-small {
-  column-gap: .25rem;
+  gap: .25rem;
 }
 
 /*=============== BUTTONS ===============*/

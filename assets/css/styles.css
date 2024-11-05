@@ -250,7 +250,7 @@ body.dark-theme {
 
 /*=============== BUTTONS ===============*/
 .button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   column-gap: .5rem;
   background-color: var(--first-color);

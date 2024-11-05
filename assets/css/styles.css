@@ -237,7 +237,7 @@ body.dark-theme {
 .profile__buttons-small {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .profile__buttons {

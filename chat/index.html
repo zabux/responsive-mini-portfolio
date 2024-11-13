@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Miaw</title>
+    <link rel="stylesheet" href="aset/css/styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="user-info">
+                <img src="img/bot-avatar.png" alt="Bot Avatar" class="avatar">
+                <div class="user-details">
+                    <h2>Miaw AI</h2>
+                    <p id="status">Online</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-body" id="chat-body">
+            <div class="message received welcome">
+                <div class="bubble">
+                    Hai! Saya adalah Miaw. Ada yang bisa saya bantu hari ini?
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-footer">
+            <input 
+                type="file" 
+                id="media-input" 
+                accept="image/*" 
+                style="display: none;" 
+                onchange="previewMedia()"
+            >
+            
+            <button 
+                class="attach-btn" 
+                onclick="document.getElementById('media-input').click()"
+            >📎</button>
+            
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="chat-input" 
+                    placeholder="Ketik pesan..." 
+                    oninput="checkInput()" 
+                    maxlength="1000"
+                >
+                
+                <div class="media-preview" id="media-preview" style="display: none;">
+                    <img id="preview-img" src="#" alt="Preview">
+                    <button class="close-preview" onclick="cancelMedia()">✕</button>
+                </div>
+            </div>
+            
+            <button 
+                class="send-btn" 
+                id="send-btn" 
+                onclick="sendMessage()" 
+                disabled
+            >
+                Kirim
+            </button>
+        </div>
+    </div>
+
+    <script src="aset/js/script.js"></script>
+    <script>
+        // Set random username if not already set
+        window.onload = function () {
+            if (!getCookie('username')) {
+                setRandomTextCookie(getRandomText());
+            }
+        };
+
+        // Function to get cookie by name
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        // Function to generate random username
+        function getRandomText() {
+            return 'user-' + Math.floor(Math.random() * 100000);
+        }
+
+        // Function to set random username in cookie
+        function setRandomTextCookie(randomText) {
+            document.cookie = `username=${randomText}; path=/`;
+        }
+    </script>
+</body>
+</html>
